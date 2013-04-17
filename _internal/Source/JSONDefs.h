@@ -148,7 +148,7 @@ typedef void (*json_free_t)(void *);
 #endif
 
 #ifdef JSON_DEBUG
-    #ifdef NDEBUG
+    #ifdef JSON_NDEBUG
 	   #ifdef __GNUC__
 		  #warning, Have JSON_DEBUG on in a release build
 	   #else
@@ -156,9 +156,9 @@ typedef void (*json_free_t)(void *);
 	   #endif
     #endif
 #else
-	#ifndef NDEBUG
+	#ifndef JSON_NDEBUG
 	   #ifdef __GNUC__
-		  #warning, Release build of libjson, but NDEBUG is not on
+		  #warning, Release build of libjson, but JSON_NDEBUG is not on
 	   #else
 		  #error, Release build of libjson, but NDEBUG is not on
 	   #endif

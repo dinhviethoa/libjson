@@ -11,7 +11,7 @@
 #define __LIBBASE64_VERSION__ (__LIBBASE64_MAJOR__ * 10000 + __LIBBASE64_MINOR__ * 100 + __LIBBASE64_PATCH__)
 
 //code coverage and asserts
-#ifdef NDEBUG
+#ifdef JSON_NDEBUG
 	#define LIBBASE64_ASSERT(cond, msg) (void)0
 	#define CREATEBOUNDCHECKER(type, name, ubound, lbound) (void)0
 	#define GETITEM_BOUNDCHECK(loc, name) (*(loc))
